@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista productos</title>
+    <!-- Boostrap cdn-->
+    <link rel = "stylesheet" href = "https://bootswatch.com/4/litera/bootstrap.min.css">      
+</head>
+<body>
+    <!-- navegacion-->
+    <nav class="navbar navbar-light bg-light">
+        <a href="/" class="navbar-brand">
+            Aplicacion de productos
+        </a>
+    </nav>
+
+    <div id="conteiner" class="container">
+        <!--Aplicaion-->
+        <div id="App" class="row pt-5">
+            <div class="col-md-4">
+                <div class="card border-primary mb-3" style="max-width: 20rem;">
+                    <div class="card-header">
+                        <h4>Agregar productos</h4>
+                    </div>
+                    <!--Formunario-->
+                    <form id="product-form" class="card-body">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Colocar producto" id="nombre">
+                        </div> 
+                        <div class="form-group">
+                            <input type="number" class="form-control" id = "precio" placeholder="Precio del producto" step="0.01">
+                        </div>     
+                        <div class="form-group">
+                            <input type="number" id="año" placeholder="Año del producto" value="2019" class="form-control" min="1900">
+                        </div> 
+                        <input type="submit" value="Guardar" class="btn btn-primary btn-block">                 
+                    </form>
+                </div>
+                <div class="form-group">
+                    <div class="custom-control custom-switch">
+                      <input type="checkbox" class="custom-control-input" id="customSwitch1" checked="">
+                      <label class="custom-control-label" for="customSwitch1">Activar modo oscuro</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div id="product-list"></div>
+            </div>        
+        </div> 
+    </div>
+    <script src="App.js"></script>
+</body>
+</html>
